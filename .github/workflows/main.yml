@@ -1,1 +1,17 @@
+on:
+  push:
+    branches:
+      - master
 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "First try"
+        run: ls
+
+      - uses: actions/checkout@v3
+
+      - name: "Second try"
+        run: ls
