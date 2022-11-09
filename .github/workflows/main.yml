@@ -8,10 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: "First try"
-        run: ls
-
-      - uses: actions/checkout@v3
-
-      - name: "Second try"
-        run: ls
+      - uses: actions/checkout@v
+      
+      - name: "Login to dockerhub"
+        run: docker login --username ${{secrets.DOCKER_USERNAME}} --password ${{secrets.DOCKER_PASSWORD}}
